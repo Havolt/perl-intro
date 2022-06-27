@@ -11,6 +11,15 @@ $c = $a . "2"; # This will be 52 due to periods being concatonated
 
 @car_keys = keys %car;
 
+# A sub is a function
+sub bark {
+    my (@params) = @_;
+    my $sound = "Woof!"; # This is private to this function due to use of my
+    return $sound, "\n", $params[0], "\n";
+}
+
+
+
 print $message;
 print $b, "\n";
 print $c, "\n";
@@ -22,3 +31,5 @@ print $car{"Color"}, "\n"; # Retrive an a value from a hash
 for $i (@car_keys) {
     print $i, "\n";
 }
+
+print bark("Boof!");
